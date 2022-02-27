@@ -23,7 +23,7 @@ for path, loc  in zip(paths, locations):
     # Only considering last 20 years 
     X = np.array(df['bloom_doy'][-20:])
 
-    data[loc] = predict(X)
+    data[loc] = int(predict(X))
 
 data.to_csv('solution/prediction.csv', index = False)
 
